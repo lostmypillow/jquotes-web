@@ -6,6 +6,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JQuotes Test</title>
+    <script>
+        // Function to wake up the API
+        function wakeUpAPI() {
+          fetch('https://jquotes-latest.onrender.com/wake', {
+            method: 'GET',
+            cache: 'no-cache' // Optional: to prevent caching the request
+          }).catch(error => {
+            // Optionally, handle errors, e.g., log them if necessary
+            console.error('API wake-up failed:', error);
+          });
+        }
+    
+        // Call the function before the page fully loads
+        wakeUpAPI();
+      </script>
 </head>
 
 <body>

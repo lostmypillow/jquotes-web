@@ -7,7 +7,7 @@ getButton.onclick = async function () {
   quoteSpace.textContent = authorSpace.textContent = categorySpace.textContent = "";
   getButton.setAttribute("aria-busy", true);
   try {
-    var content = (await (await fetch("https://jquotes-latest.onrender.com/quote")).json()).data;
+    var content = (await (await fetch("https://jquotes-latest.onrender.com/")).json()).data;
     [
       quoteSpace.textContent,
       authorSpace.textContent,
